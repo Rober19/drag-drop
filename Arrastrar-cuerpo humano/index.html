@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>title</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="public/bootstrap-grid.min.css">
+  <link rel="stylesheet" href="public/animate.css">
+  <link rel="stylesheet" type="text/css" media="screen" href="public/style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/hover.css/2.3.1/css/hover-min.css">
+
+</head>
+
+<script>
+  function allowDrop(ev) {
+    ev.preventDefault();
+  }
+
+  function drag(ev) {
+    ev.dataTransfer.setData("text", ev.target.id);
+  }
+
+  function drop(ev) {
+    ev.preventDefault();
+    var data = ev.dataTransfer.getData("text");
+    ev.target.appendChild(document.getElementById(data));
+  }
+</script>
+
+<body class="container">
+  <div class="container">
+    <div class="row">
+      <!-- izquierda -->
+      <div class="animated bounceInUp col-6">
+
+        <div class="row">
+          <div class="col-6">
+            <div class="row">
+              <div style="width: 200px" class="button hvr-grow">
+                <img src="./public/imgs/brazo2.png" width="100%">
+              </div>
+            </div>
+            <div class="row">
+              <div style="width: 200px" class="button hvr-grow">
+                <img src="./public/imgs/pierna1.png" width="100%">
+              </div>
+            </div>
+            <div class="row">
+              <div style="width: 200px" class="button hvr-grow">
+                <img src="./public/imgs/pierna2.png" width="100%">
+              </div>
+            </div>
+          </div>
+          <div class="col-6">
+            <div class="row">
+              <div style="width: 200px" class="button hvr-grow" ondrop="drop(event)" ondragover="allowDrop(event)">
+                <img src="./public/imgs/head.png" width="100%" draggable="true" ondragstart="drag(event)" id="drag1">
+              </div>
+            </div>
+            <div class="row">
+              <div style="width: 200px; height: 300px;" class="button hvr-grow">
+                <img src="./public/imgs/torso.png" width="100%">
+              </div>
+            </div>
+            <div class="row">
+              <div style="width: 200px" class="button hvr-grow">
+                <img src="./public/imgs/brazo1.png" width="100%">
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+      </div>
+      <!-- derecha -->
+      <div class="animated bounceInDown col-6">
+        <div class="d-flex justify-content-center">
+
+          <div>
+
+            <div class="row" style="border-color: rgb(201, 76, 76)">
+              <div class="col-6 col-md-4"></div>
+              <div class="col-6 col-md-4">
+                <div id="head" class="d-flex align-items-center  button hvr-buzz" ondrop="drop(event)" ondragover="allowDrop(event)">
+                
+                  <div>
+                      <img src="./public/imgs/cabezadfill.png" width="100%" style="margin-left: -20px; margin-top: 50px;position: inherit;">
+                  </div>
+                </div>
+              </div>
+              <div class="col-6 col-md-4"></div>
+            </div>
+
+            <div class="row">
+              <div class="col-6 col-md-4">
+                <div id="brazo1" class="d-flex align-items-center  button hvr-buzz">
+                  <img src="./public/imgs/brazo1Fill.png" width="90%" style="margin-left: 25px">
+                </div>
+              </div>
+              <div class="col-6 col-md-4">
+                <div id="torso" class="d-flex align-items-center  button hvr-buzz">
+                  <div>
+                    <img src="./public/imgs/torsoFIll.png" width="100%">
+                  </div>
+                </div>
+              </div>
+              <div class="col-6 col-md-4">
+                <div id="brazo2" class="d-flex align-items-center  button hvr-buzz">
+                  <div>
+                    <img src="./public/imgs/brazo2Fill.png" width="90%" style="margin-right: 10px; margin-bottom: 85px">
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="row">
+              <div class="col"></div>
+              <div class="col">
+                <div id="pie1" class="d-flex align-items-center  button hvr-buzz">
+                  <div>
+                    <img src="./public/imgs/pierna1Fill.png" width="80%" style="margin-left: 85px; margin-bottom: 85px">
+                  </div>
+                </div>
+              </div>
+
+              <div class="col">
+                <div id="pie2" class="d-flex align-items-center  button hvr-buzz">
+                  <div>
+                    <img src="./public/imgs/pierna2Fill.png" width="80%" style="margin-left: 30px; margin-bottom: 100px">
+                  </div>
+                </div>
+              </div>
+
+              <div class="col">
+              </div>
+            </div>
+
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </div>
+
+</body>
+
+</html>
