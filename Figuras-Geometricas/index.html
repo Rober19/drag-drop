@@ -6,21 +6,83 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <link rel="stylesheet" type="text/css" media="screen" href="public/style.css" />
-  <script src="public/main.js"></script>
+  <link rel="stylesheet" href="./public/lib/Flat-HTML5-Palette-Color-Picker-For-jQuery-colorPick-js/src/colorPick.css">
+  <link href="http://www.jqueryscript.net/css/jquerysctipttop.css" rel="stylesheet" type="text/css">
+  <link rel="stylesheet" href="public/lib/bootstrap-grid.min.css">
+  <link rel="stylesheet" href="public/lib/animate.css">
+  <link rel="stylesheet" href="public/lib/hover-min.css">
   <title>Document</title>
+  <script src="public/lib/jquery-3.3.1.min.js"></script>
+  <script src="./public/lib/Flat-HTML5-Palette-Color-Picker-For-jQuery-colorPick-js/src/colorPick.js"></script>
+  <link href="https://fonts.googleapis.com/css?family=Josefin+Sans" rel="stylesheet">
+
 </head>
 
 <body>
-  <div id="circulo" class="forma"></div>
-  <div id="cuadrado" class="forma"></div>
-  <div id="rombo" class="forma"></div>
-  <div id="hexagono" class="forma"></div>
-  <div id="ovalo" class="forma"></div>
-  <div id="paralelogramo" class="forma"></div>
-  <div id="pentagono" class="forma"></div>
-  <div id="rectangulo" class="forma"></div>
-  <div id="trapezoide" class="forma"></div>
-  <div id="triangulo" class="forma"></div>
+  <div class="">
+    <div class="row">
+      <div class="col d-flex justify-content-center"></div>
+      <div class="col d-flex justify-content-center ">
+        <h1 style="font-family: 'Josefin Sans' ,'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif; color: lightseagreen; font-size: 50px;">Arrastra Aquí</h1>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col d-flex justify-content-center">
+        <div id="circulo" class="forma colorPickSelector1 button hvr-grow"></div>
+      </div>
+      <div class="col d-flex justify-content-center">
+
+        <div id="circulo" class="forma2 button hvr-buzz"></div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col d-flex justify-content-center">
+        <div id="cuadrado" class="forma colorPickSelector2 button hvr-grow"></div>
+      </div>
+      <div class="col d-flex justify-content-center">
+        <div id="cuadrado" class="forma2 button hvr-buzz"></div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col d-flex justify-content-center">
+        <div id="ovalo" class="forma colorPickSelector3 button hvr-grow"></div>
+      </div>
+      <div class="col d-flex justify-content-center">
+        <div id="ovalo" class="forma2 button hvr-buzz"></div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col d-flex justify-content-center">
+        <div id="rectangulo" class="forma colorPickSelector4 button hvr-grow"></div>
+      </div>
+      <div class="col d-flex justify-content-center">
+        <div id="rectangulo" class="forma2 button hvr-buzz"></div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col d-flex justify-content-center">
+        <div id="triangulo" class="forma colorPickSelector5 button hvr-grow"></div>
+      </div>
+      <div class="col d-flex justify-content-center">
+        <div id="triangulo" class="forma2 button hvr-buzz"></div>
+      </div>
+    </div>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <!-- Es necesario que main.js esté aqui abajo -->
+  <script src="public/main.js"></script>
 </body>
 
 </html>

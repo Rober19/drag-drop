@@ -1,12 +1,27 @@
 .forma{
   display: inline-block;
-  margin: 16px;
+  margin: 16px;  
+}
+
+.forma2{
+   display: inline-block;
+   margin: 16px;
+   opacity: 0.5;
+ }
+
+#triangulo {
+   width: 0px;
+   height: 0px;
+   border-style: solid;
+   border-width: 0 80px 100px 80px;
+   border-color: transparent transparent #35cf76 transparent;
+   
 }
 
 #circulo {
    width: 100px;
    height: 100px;
-   background: #3498db;
+   background: #fc14c9;
    -moz-border-radius: 50px;
    -webkit-border-radius: 50px;
    border-radius: 50px;
@@ -15,58 +30,11 @@
 #cuadrado {
    width: 100px;
    height: 100px;
-   background: #d35400;
+   background: #24bce2;
 }
 
-#rombo {
-   width: 0;
-   height: 0;
-   border: 50px solid transparent; 
-   border-bottom-color: #16a085; 
-   position: relative;
-   top: -50px;
-} 
 
-#rombo:after { 
-   content: '';
-   position: absolute; 
-   left: -50px; 
-   top: 50px; 
-   width: 0; 
-   height: 0; 
-   border: 50px solid transparent; 
-   border-top-color: #16a085;
-}
 
-#hexagono { 
-   width: 100px; 
-   height: 55px; 
-   background: #c0392b; 
-   position: relative; } 
-
-#hexagono:before { 
-   width: 0; 
-   height: 0; 
-   content: ""; 
-   position: absolute; 
-   top: -25px; 
-   left: 0; 
-   border-left: 50px solid transparent; 
-   border-right: 50px solid transparent; 
-   border-bottom: 25px solid #c0392b;
-} 
-
-#hexagono:after { 
-   width: 0; 
-   height: 0; 
-   content: ""; 
-   position: absolute; 
-   bottom: -25px; 
-   left: 0; 
-   border-left: 50px solid transparent; 
-   border-right: 50px solid transparent; 
-   border-top: 25px solid #c0392b;
-}
 
 #ovalo {
    width:  200px; 
@@ -76,34 +44,6 @@
    -webkit-border-radius:  100px / 50px;
 }
 
-#paralelogramo {
-   width: 150px; 
-   height: 100px; 
-   background: #bdc3c7;
-   -webkit-transform: skew(20deg); 
-   -moz-transform: skew(20deg); 
-   -o-transform: skew(20deg); 
-}
-
-#pentagono { 
-   width: 54px; 
-   position: relative;
-   border-width: 50px 18px 0; 
-   border-style: solid; 
-   border-color: #34495e transparent;
-}
-
-#pentagono:before { 
-   content: ""; 
-   position: absolute; 
-   height: 0; 
-   width: 0; 
-   top: -85px; 
-   left: -18px; 
-   border-width: 0 45px 35px; 
-   border-style: solid; 
-   border-color: transparent transparent #34495e;
-}
 
 #rectangulo {
    width: 200px;
@@ -111,18 +51,17 @@
    background: #7f8c8d;
 }
 
-#trapezoide {
-   width: 100px;
-   height: 0;
-   border-bottom: 100px solid #35cf76; 
-   border-left: 50px solid transparent; 
-   border-right: 50px solid transparent; 
-}
 
-#triangulo {
-   width: 0px;
-   height: 0px;
-   border-style: solid;
-   border-width: 0 50px 50px 50px;
-   border-color: transparent transparent #35cf76 transparent;
+body { background-color:#f7f7f7;}
+.container { margin:150px auto; max-width:640px;}
+.colorPickSelector {
+border-radius: 5px;
+width: 36px;
+height: 36px;
+cursor: pointer;
+-webkit-transition: all linear .2s;
+-moz-transition: all linear .2s;
+-ms-transition: all linear .2s;
+-o-transition: all linear .2s;
+transition: all linear .2s;
 }
