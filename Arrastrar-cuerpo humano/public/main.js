@@ -26,20 +26,72 @@ async function DropEventElement(e) {
     beep();
     i++;
     console.log(i)
+
+    //ToastMsg_OK();
+    AlertMsg_OK();
+
     if (i == 6) {
       await swal({
-        type: 'success',                     
+        type: 'success',
+        title: 'Excelente, Lo Completaste!!!👏🏻👏🏻',
         html: "<img src='./public/imgs/body.png' style='width: 270px'>",
       })
-      console.log('palo')
       location.reload();
     }
   } else {
     console.log('error')
+    // swal({
+    //   type: 'error',
+    //   title: 'Oops...'
+    // })
+    //ToastMsg_ERR();
+    AlertMsg_ERR();
+  }
+
+
+  function ToastMsg_OK() {
+    const toast = swal.mixin({
+      toast: true,
+      position: 'top',
+      showConfirmButton: false,
+      timer: 1500
+    });
+    toast({
+      type: 'success',
+      title: 'Muy Bien'
+    })
+  }
+
+  function ToastMsg_ERR() {
+    const toast = swal.mixin({
+      toast: true,
+      position: 'top',
+      showConfirmButton: false,
+      timer: 1500
+    });
+    toast({
+      type: 'error',
+      title: 'Fallaste, Intenta en otra'
+    })
+  }
+
+
+  function AlertMsg_ERR() {
     swal({
       type: 'error',
-      title: 'Oops...'
+      title: 'Fallaste, Intenta en otra',
+      animation: false,
+      customClass: 'animated tada'
     })
+  }
+
+  function AlertMsg_OK() {
+    swal({
+      type: 'success',
+      title: 'Muy Bien!!',
+      animation: false,
+      customClass: 'animated bounceIn'    })
+
   }
 
 }
