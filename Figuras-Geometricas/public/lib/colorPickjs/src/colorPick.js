@@ -64,7 +64,7 @@
 
             $.proxy($.fn.colorPick.defaults.onColorSelected, this)();
 
-            this.element.click(function(event) {
+            this.element.dblclick(function(event) {
                 event.preventDefault();
                 self.show(event.pageX, event.pageY);
 
