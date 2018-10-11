@@ -65,7 +65,7 @@ async function handleDrop(event, ui) {
         title: 'Excelente, Lo Completaste!!!👏🏻👏🏻',
         // html: "<img src='../Arrastrar-cuerpo humano/public/imgs/complete.png' style='width: 270px'>",
       })
-      location.reload();
+      await location.reload(true);
     } else {
       ToastMsg_OK()
     }
