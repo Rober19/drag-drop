@@ -63,7 +63,7 @@ async function handleDrop(event, ui) {
       await swal({
         type: 'success',
         title: 'Excelente, Lo Completaste!!!👏🏻👏🏻',
-        html: "<img src='./public/imgs/complete.png' style='width: 270px'>",
+        html: "<img src='../Arrastrar-cuerpo humano/public/imgs/complete.png' style='width: 270px'>",
       })
       location.reload();
     } else {
