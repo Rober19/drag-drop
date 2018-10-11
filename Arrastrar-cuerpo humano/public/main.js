@@ -31,8 +31,10 @@ async function DropEventElement(e) {
         html: "<img src='./public/imgs/body.png' style='width: 270px'>",
       })
       location.reload();
+    } else {
+      AlertMsg_OK();
     }
-    AlertMsg_OK();
+  
 
   } else {
     console.log('error')

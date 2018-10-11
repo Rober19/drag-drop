@@ -66,8 +66,10 @@ async function handleDrop(event, ui) {
         html: "<img src='./public/complete.png' style='width: 270px'>",
       })
       location.reload();
+    } else {
+      ToastMsg_OK()
     }
-    ToastMsg_OK()
+   
 
     //ui.draggable.draggable('option', 'revert', false);
   } else {
