@@ -1,4 +1,4 @@
-
+let figuras = []
 $(() => {
 
   $(".forma").draggable
@@ -34,14 +34,14 @@ $(() => {
   });
 });
 
-function handleDrop(event, ui) {
+async function handleDrop(event, ui) {
   var slotNumber = event.target.classList[0];
   var cardNumber = ui.draggable[0].classList[0];
   // console.log(event.target.className)
   // console.log(ui.draggable[0].className)
 
   if (slotNumber == cardNumber) {
-   $(this).find(`.${cardNumber}`).html();
+    $(this).find(`.${cardNumber}`).html();
     ui.draggable.addClass('correct');
     $(`.${cardNumber}`).draggable
       ({
@@ -50,42 +50,40 @@ function handleDrop(event, ui) {
         snapMode: 'corner',
         snapTolerance: '22'
       });
-   
-    //ui.draggable.draggable('option', 'revert', false);
-  } else {
-    console.log('Mal')
-  }
-}
-
-
-async function DropEventElement(e) {
-
-  if (data.type == img.className) {
-    document.getElementById(img.id).src = data.img_src;
     beep();
-    i++;
-    console.log(i)
 
-    //ToastMsg_OK();
-    AlertMsg_OK();
 
-    if (i == 6) {
+    if (!figuras.includes(cardNumber)) {
+      figuras.push(cardNumber)
+    }
+
+    console.log(figuras)
+
+    if (figuras.length == 5) {
       await swal({
         type: 'success',
         title: 'Excelente, Lo Completaste!!!👏🏻👏🏻',
-        html: "<img src='./public/imgs/body.png' style='width: 270px'>",
+        html: "<img src='./public/complete.png' style='width: 270px'>",
       })
       location.reload();
     }
+    ToastMsg_OK()
+
+    //ui.draggable.draggable('option', 'revert', false);
   } else {
-    console.log('error')
     error();
-    AlertMsg_ERR();
+    ToastMsg_ERR()
+    if (figuras.includes(cardNumber)) {
+      figuras.splice(figuras.indexOf(cardNumber), 1);
+    }
+
+    console.log(figuras)
+
   }
-
-
-
 }
+
+
+
 
 function ToastMsg_OK() {
   const toast = swal.mixin({
