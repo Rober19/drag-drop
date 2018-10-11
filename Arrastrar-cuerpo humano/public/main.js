@@ -21,20 +21,16 @@ async function DropEventElement(e) {
   if (data.type == img.className) {
     document.getElementById(img.id).src = data.img_src;
     beep();
-    i++;
-    console.log(i)
-
-    if (i == 6) {
+    i++;   
+    await AlertMsg_OK(img.className);
+    if (i == 6) {      
       await swal({
         type: 'success',
         title: 'Excelente, Lo Completaste!!!👏🏻👏🏻',
         html: "<img src='./public/imgs/body.png' style='width: 270px'>",
       })
       location.reload();
-    } else {
-      AlertMsg_OK();
     }
-  
 
   } else {
     console.log('error')
@@ -82,10 +78,12 @@ function AlertMsg_ERR() {
   })
 }
 
-function AlertMsg_OK() {
-  swal({
+async function AlertMsg_OK(e) {
+
+  let val = (e=='head') ? 'la Cabeza' : (e=='torso') ? 'el Cuerpo' : (e=='brazo1') ? 'el Brazo Derecho' : (e=='brazo2') ? 'el Brazo Izquierdo' : (e=='pierna1') ? 'la Pierna Derecha' : (e=='pierna2') ? 'la Pierna Izquierda' : '';
+  await swal({
     type: 'success',
-    title: 'Muy Bien!!',
+    title: `Muy Bien!! Has Colocado ${val}`,
     animation: false,
     customClass: 'animated bounceIn'
   })
