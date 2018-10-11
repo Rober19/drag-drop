@@ -1,12 +1,15 @@
-.forma{
-  display: inline-block;
+.forma{  
   margin: 16px;  
+  display: inline-block;
+  z-index: 1;
 }
 
 .forma2{
-   display: inline-block;
+   position: relative;   
    margin: 16px;
-   opacity: 0.5;
+   opacity: 0.2;
+   display: inline-block;
+   
  }
 
 #triangulo {
@@ -18,14 +21,24 @@
    
 }
 
-#circulo {
+.circulo {
    width: 100px;
-   height: 100px;
+   height: 100px;   
    background: #fc14c9;
    -moz-border-radius: 50px;
    -webkit-border-radius: 50px;
    border-radius: 50px;
 }
+
+.circulo2 {
+   width: 100px;
+   height: 100px;
+   background: #fc14c9;
+   -moz-border-radius: 50px;
+   -webkit-border-radius: 50px;
+   border-radius: 50px;    
+}
+
 
 #cuadrado {
    width: 100px;
@@ -52,16 +65,4 @@
 }
 
 
-body { background-color:#f7f7f7;}
-.container { margin:150px auto; max-width:640px;}
-.colorPickSelector {
-border-radius: 5px;
-width: 36px;
-height: 36px;
-cursor: pointer;
--webkit-transition: all linear .2s;
--moz-transition: all linear .2s;
--ms-transition: all linear .2s;
--o-transition: all linear .2s;
-transition: all linear .2s;
-}
+

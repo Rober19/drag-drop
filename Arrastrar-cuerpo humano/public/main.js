@@ -24,9 +24,6 @@ async function DropEventElement(e) {
     i++;
     console.log(i)
 
-    //ToastMsg_OK();
-    AlertMsg_OK();
-
     if (i == 6) {
       await swal({
         type: 'success',
@@ -35,14 +32,16 @@ async function DropEventElement(e) {
       })
       location.reload();
     }
+    AlertMsg_OK();
+
   } else {
     console.log('error')
-   error();
+    error();
     AlertMsg_ERR();
   }
 
 
-  
+
 }
 
 function ToastMsg_OK() {
@@ -86,7 +85,8 @@ function AlertMsg_OK() {
     type: 'success',
     title: 'Muy Bien!!',
     animation: false,
-    customClass: 'animated bounceIn'})
+    customClass: 'animated bounceIn'
+  })
 
 }
 
