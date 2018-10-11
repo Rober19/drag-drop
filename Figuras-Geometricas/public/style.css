@@ -12,7 +12,7 @@
    
  }
 
-#triangulo {
+.triangulo {
    width: 0px;
    height: 0px;
    border-style: solid;
@@ -30,17 +30,8 @@
    border-radius: 50px;
 }
 
-.circulo2 {
-   width: 100px;
-   height: 100px;
-   background: #fc14c9;
-   -moz-border-radius: 50px;
-   -webkit-border-radius: 50px;
-   border-radius: 50px;    
-}
 
-
-#cuadrado {
+.cuadrado {
    width: 100px;
    height: 100px;
    background: #24bce2;
@@ -49,7 +40,7 @@
 
 
 
-#ovalo {
+.ovalo {
    width:  200px; 
    height:  100px; 
    background:  #f1c40f; 
@@ -58,7 +49,7 @@
 }
 
 
-#rectangulo {
+.rectangulo {
    width: 200px;
    height: 100px;
    background: #7f8c8d;

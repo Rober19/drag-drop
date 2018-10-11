@@ -1,60 +1,59 @@
-'use strict'
 
 $(() => {
 
-  $("#figura").draggable
+  $(".forma").draggable
     ({
-      revert: 'invalid',
-      snap: '#caja',
+      stack: '.forma2 div',
+      cursor: 'move',
+      revert: true,
+      snap: '#droppable',
       snapMode: 'corner',
       snapTolerance: '22'
     });
 
-  $("#figura").data({
-    'originalLeft': $("#figura").css('left'),
-    'origionalTop': $("#figura").css('top')
+  $(".forma").data({
+    'originalLeft': $(".forma").css('left'),
+    'origionalTop': $(".forma").css('top')
   });
 
 
-  $("#caja").droppable
+
+  $(".forma2").droppable
     ({
-      accept: '#figura',
-      drop:  (event, ui) => {
-        $(this).find("#figura").html();
-        console.log()
+      accept: '.forma',    
+      drop: (event, ui) => {
+        handleDrop(event, ui)
       }
     });
 
-  $(".reset").click( () => {
-    $("#figura").css({
-      'left': $("#figura").data('originalLeft'),
-      'top': $("#figura").data('origionalTop')
+
+
+  $(".reset").click(() => {
+    $(".forma").css({
+      'left': $(".forma").data('originalLeft'),
+      'top': $(".forma").data('origionalTop')
     }
     );
   });
 });
 
-let data = {}
-let i = 0;
+function handleDrop(event, ui) {
+  var slotNumber = event.target.classList[0];
+  var cardNumber = ui.draggable[0].classList[0];
 
-function allowDrop(ev) {
-  ev.preventDefault();
-}
 
-function DragEventElement(e) {
-  const img = e.srcElement
-  data = {
-    type: img.className,
-    id: img.id,
-    img_src: img.src
+  if (slotNumber == cardNumber) {
+    ui.draggable.addClass('correct');
+    ui.draggable.draggable('disable');
+    console.log(this)
+
+    ui.draggable.draggable('option', 'revert', false);
   }
-
-  console.log(data)
 }
+
 
 async function DropEventElement(e) {
-  e.preventDefault()
-  const img = e.srcElement
+
   if (data.type == img.className) {
     document.getElementById(img.id).src = data.img_src;
     beep();
