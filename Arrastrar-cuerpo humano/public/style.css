@@ -1,3 +1,6 @@
+.hand-cursor :hover{
+  cursor: pointer !important;
+}
 
 #head{
 

@@ -21,8 +21,8 @@
 
     <div class="row mt-3">
 
-      <div class="col-sm-4 mt-2" ng-repeat="item in aABC">
-        <div class="card text-center " data-toggle="modal" data-target="#exampleModalCenter" ng-click="itemSelectedHandle(item)">
+      <div class="col-sm-4 mt-2 hand-cursor" ng-repeat="item in aABC">
+        <div class="card text-center card-border" data-toggle="modal" data-target="#exampleModalCenter" ng-click="itemSelectedHandle(item)">
           <div class="card-body hvr-wobble-horizontal ">
 
             <h1 class="card-title" style="color: aqua; font-size: 60px;">{{item}}</h1>
@@ -44,9 +44,10 @@
         <div class="modal-content zoomInUp animated">
           <div class="modal-header">
             <h5 class="modal-title" id="exampleModalCenterTitle">{{itemSelected.title}}</h5>
-            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <!-- <button type="button" class="close" data-dismiss="modal" aria-label="Close">
               <span aria-hidden="true">&times;</span>
-            </button>
+            </button> -->
+            <img data-dismiss="modal" src="image/assets/cancelar.png" class="btn-cancelar">
           </div>
           <div class="modal-body">
             {{itemSelected.description}}
