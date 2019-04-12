@@ -11,3 +11,13 @@
 ![](https://i.ibb.co/9p8FDnR/image.png)
 
 ## Diseño Instruccional
+
+
+[Cuerpo Humano](https://rober19.github.io/drag-drop/diseño-instruccional-cuerpo-humano/)
+![](https://i.ibb.co/ncVjxbb/image.png)
+
+[Figuras Geometricas]( https://rober19.github.io/drag-drop/diseño-instruccional-figuras-geometricas/index.html)
+![](https://i.ibb.co/grsxLr8/image.png)
+
+[Letras Cartas]( https://rober19.github.io/drag-drop/diseño-instruccional-letras-cartas/)
+![](https://i.ibb.co/9p8FDnR/image.png)
