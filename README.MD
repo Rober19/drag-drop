@@ -1,5 +1,5 @@
 
-## Contenido didáctico
+# Contenido didáctico
 
 [Cuerpo Humano](https://rober19.github.io/drag-drop/diseño-instruccional-cuerpo-humano/Arrastrar-cuerpo%20humano/)
 ![](https://i.ibb.co/ncVjxbb/image.png)
@@ -10,7 +10,7 @@
 [Letras Cartas]( https://rober19.github.io/drag-drop/diseño-instruccional-letras-cartas/LetrasCartas/)
 ![](https://i.ibb.co/9p8FDnR/image.png)
 
-## Diseño Instruccional
+# Diseño Instruccional
 
 
 [Cuerpo Humano](https://rober19.github.io/drag-drop/diseño-instruccional-cuerpo-humano/)
