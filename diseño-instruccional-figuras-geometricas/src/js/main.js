@@ -6,6 +6,10 @@ $('#b_introduccion').click(e => {
   console.table(0);
   side_bar({ introduccion: true });
 });
+$('#b_guia_docentes').click(e => {
+  console.table(1);
+  side_bar({ guia_docentes: true });
+});
 $('#b_objetivo').click(e => {
   console.table(1);
   side_bar({ objetivo: true });
@@ -40,5 +44,11 @@ function side_bar(x) {
     fuentes: x.fuentes
       ? $('#fuentes').css('display', 'block')
       : $('#fuentes').css('display', 'none'),
+    guia_docentes: x.guia_docentes
+      ? $('#guia_docentes').css('display', 'block')
+      : $('#guia_docentes').css('display', 'none'),
+      b_contenidos: x.b_contenidos
+      ? $('#b_contenidos').css('display', 'block')
+      : $('#b_contenidos').css('display', 'none'),
   };
 }

@@ -16,9 +16,43 @@
   <!-- Custom styles for this template -->
   <link href="src/css/simple-sidebar.css" rel="stylesheet">
 
+
+  <script type="text/javascript">
+    function load() {
+      data = '[{"name" : "Riyaz"},{"name" : "Javed"},{"name" : "Arun"},{"name" : "Sunil"},{"name" : "Rahul"},{"name" : "Anita"}]';
+      var mydata = JSON.parse(data);
+
+
+      var div = document.getElementById('data');
+
+      for (var i = 0; i < mydata.length; i++) {
+        div.innerHTML = div.innerHTML + "<p class='inner' id=" + i + ">" + mydata[i].name + "</p>" + "<br>";
+      }
+    }
+  </script>
+
 </head>
 
-<body>
+<body onload="load()">
+
+
+  <!-- <script>
+    //     $(document).ready(function(e) {
+    //        alert(jsonObject.start.count);
+    //  });
+    var i;
+    var peopleinfo = "";
+    var people = [];
+    for (i = 0; i < people.length; i++) {
+      peopleinfo += people[i].fname + "<br>" + people[i].lname + "<br>" + people[i].relation + "<br>" + people[i].relationid + "<br><p>********</p>";
+    }
+
+    function displayInfo() {
+      document.getElementById("demo").innerHTML = peopleinfo;
+    }
+  </script>
+
+ -->
 
 
 
@@ -30,18 +64,16 @@
         <div class="col s12 l3 m3 center"><img src="public/logo_CURN.png" alt="Logo CURN" class="responsive-img"></div>
       </div>
       <div class="list-group list-group-flush">
-          <a href="#" id="b_introduccion" class="list-group-item list-group-item-action bg-light">Introducción</a>
-          <!-- Guia para docentes - Diseño instruccional -->
-          <a href="#" id="b_guia_docentes" class="list-group-item list-group-item-action bg-light">Guia para docentes - Diseño instruccional</a>
-          <a href="#" id="b_objetivo" class="list-group-item list-group-item-action bg-light">Objetivo de
-            Aprendizaje</a>
-            <!-- Contenidos -->
-            <a href="#" id="b_contenidos" class="list-group-item list-group-item-action bg-light">Contenidos</a>
-          <a href="#" id="b_competencias" class="list-group-item list-group-item-action bg-light">Competencias</a>
-          <a href="#" id="b_evaluacion" class="list-group-item list-group-item-action bg-light">Evaluación</a>
-          <a href="#" id="b_fuentes" class="list-group-item list-group-item-action bg-light">Fuentes</a>
-          <!-- Créditos  -->
-          <a href="#" id="b_creditos" class="list-group-item list-group-item-action bg-light">Créditos</a>
+        <a href="#" id="b_introduccion" class="list-group-item list-group-item-action bg-light">Introducción</a>
+        <!-- Guia para docentes - Diseño instruccional -->
+        <a href="#" id="b_guia_docentes" class="list-group-item list-group-item-action bg-light">Factor y subfactores
+          (Guia para docentes- Diseño instruccional)</a>
+        <a href="#" id="b_objetivo" class="list-group-item list-group-item-action bg-light">Objetivo de
+          Aprendizaje</a>
+        <!-- Contenidos -->
+        <a href="#" id="b_competencias" class="list-group-item list-group-item-action bg-light">Contenidos</a>
+        <a href="#" id="b_evaluacion" class="list-group-item list-group-item-action bg-light">Evaluación</a>
+
 
       </div>
     </div>
@@ -50,25 +82,25 @@
     <!-- Page Content -->
     <div id="page-content-wrapper">
 
-        <nav class="navbar navbar-expand-lg navbar-light bg-light border-bottom">
-            <button class="btn btn-primary" id="menu-toggle">
-              <div></div>
-              <div></div>
-              <div></div>
-            </button>
-            <div class="col center"><img src="public/apropiados-01.png" alt="Logo CURN" class="responsive-img"
-                width="150px"></div>
-            <!-- <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+      <nav class="navbar navbar-expand-lg navbar-light bg-light border-bottom">
+        <button class="btn btn-primary" id="menu-toggle">
+          <div></div>
+          <div></div>
+          <div></div>
+        </button>
+        <div class="col center"><img src="public/apropiados-01.png" alt="Logo CURN" class="responsive-img"
+            width="150px"></div>
+        <!-- <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
               aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
               <span class="navbar-toggler-icon"></span>
             </button> -->
-    
-            <div class="col s12 l3 m3 center" align="center">PROGRAMA DE LICENCIATURA EN EDUCACIÓN INFANTIL</div>
-    
-            <div class="collapse navbar-collapse" id="navbarSupportedContent">
-    
-            </div>
-          </nav>
+
+        <div class="col s12 l3 m3 center" align="center">PROGRAMA DE LICENCIATURA EN EDUCACIÓN INFANTIL</div>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+
+        </div>
+      </nav>
 
       <div class="container">
         <div style="display: block;font-size: 22px" id="introduccion">
@@ -77,29 +109,138 @@
             Diseño Instruccional para Matemáticas “los conjuntos”
             <br>
             <br>
-            <p>Se describe el diseño de un OVA para el aprendizaje las matemáticas, se trabajará los conjuntos. Basados
-              en Agrupar objetos de acuerdo con diferentes atributos, tales como el color, la forma, su uso, etc.</p>
+            <p>Con este procedimiento se pretende enseñar sobre los conjuntos, concepto básico en la enseñanza de las
+              matemáticas; se despertará el interés en los niños de 5 a 6 año a través de actividades que servirán para
+              desarrollar el razonamiento lógico matemático de acuerdo a los diferentes atributos, tales como el color,
+              la forma y uso de las figuras geométricas.</p>
 
 
             Elementos de contextualización: <br>
             <strong>Área de Conocimiento:</strong> Matemáticas <br>
-            <strong>Tema:</strong> los conjuntos
+            <strong>Tema:</strong> Los Conjuntos
 
 
           </div>
         </div>
+
         <div style="display: none;font-size: 22px" id="objetivo">
           <h1 class="mt-4">Objetivo de Aprendizaje</h1>
-          <p>Identificar los objetos de acuerdo a las siguientes características color, forma, textura, su uso, etc.
-            logrando así que los niños estimulan el interés temprano por las matemáticas y aprenden los conjuntos.</p>
+
+          <p>Identificar las figuras geométricas de acuerdo con sus características: color, forma y uso; logrando así
+            que los niños y niñas desarrollen su dimensión cognitiva del razonamiento lógico matemático para relacionar
+            los objetos con el entorno.</p>
         </div>
+
+        <div style="display: none;font-size: 22px" id="guia_docentes">
+          <p>
+            Los niños a medida que arrastran los objetos para colocarlos donde corresponde deben identificar sus
+            características por lo tantos tienes que estar atentos, a las semejanzas y diferencias durante la actividad
+            para poder realizarla satisfactoriamente.
+            <br>
+            <br>
+            Sustentación pedagógica del objeto de aprendizaje:
+            <br>
+            Estimular en el educando el conocimiento sobre los conjuntos y las distintas maneras de implementación que
+            tiene en nuestro diario vivir, ya que las matemáticas se ven enfocada en todo lo que hacemos y los conjuntos
+            o agrupación de igual manera, es necesario que el niño diferencie los objetos porque así van despertando el
+            interés por las matemática con base a la organización de objeto, entre otras cosas, es necesario que logre
+            identificar las características específicas de cada uno, para luego calificarlas y reconozcan las
+            diferencias y semejanzas que existes. Cuando un niño ya sabe organizar objetos por conjunto se le puede
+            enseñar las matemáticas con base al conteo y utilizando diferentes estrategias, estas actividades se
+            implementan en diferentes áreas y con diversos objetos, frutas, etc. Solo se necesita de una estrategia que
+            despierte el interés en los niños.
+
+
+          </p>
+
+          <table>
+            <tr>
+              <th>Problema y /o actividad</th>
+              <th>Activación cognitiva:</th>
+              <th>Demostración cognitiva</th>
+              <th>Aplicación cognitiva</th>
+              <th>Integración cognitiva</th>
+            </tr>
+            <tr>
+              <td><strong>Identificando y agrupando los conjuntos</strong></td>
+              <td><strong>Guión pedagógico:</strong><br><br>
+                Al inicio se les mostrara diferentes objetos
+
+                Identificar que objetos están en el aula de clase
+
+                Mostrar una imagen de los objetos y su nombre para que el niño relacione lo visto con los que lo rodean.
+
+                Luego agruparan los objetos que sean parecidos, de acuerdo a sus atributos.
+              </td>
+              <td><strong>Guión pedagógico:</strong><br><br>
+                Se mostrará una imagen en el computador la cual tendrá dos lados con figuras geométricas para que el
+                niño las identifique.
+
+                Luego arrastraran con el mouse la imagen que corresponda
+                A cada figura de acuerdo sus características y al orden correspondiente.
+
+              </td>
+              <td><strong>Guión pedagógico:</strong><br>
+
+                Permitir que los niños realicen una secuencia de acuerdo a las formas de los objetos.
+              </td>
+              <td><strong>Guión pedagógico:</strong>
+                <br>
+                <br>
+
+                Realizar una animación que deje ver otras ideas que les pueda funcionar a la maestra en beneficio de la
+                realización de conjunto.
+              </td>
+            </tr>
+            <tr>
+              <td><strong>Interacción</strong></td>
+              <td>Activa el pensamiento nocional porque el fomenta las operaciones intelectuales comprometidas en las
+                relaciones objeto, palabra e imagen mental.</td>
+              <td>El niño deberá interactuar solucionando las actividades</td>
+              <td>Depende del desarrollo de habilidades de cada niño</td>
+              <td></td>
+            </tr>
+            <tr>
+              <td><strong>Retroalimentación</strong></td>
+              <td></td>
+              <td></td>
+              <td>Interacción con el OVA</td>
+              <td></td>
+            </tr>
+            <tr>
+              <td><strong>Escenario:</strong></td>
+              <td>Una animación donde se evidencie los objetos con los cuales se van a trabajar </td>
+              <td></td>
+              <td>virtual</td>
+              <td></td>
+            </tr>
+            <tr>
+              <td><strong>Componente de la inteligencia Practica</strong></td>
+              <td colspan="4">Selección: identificación de objetos, realización de conjuntos a través de solución de
+                problemas. <br>
+                Adaptación: Capacidad para resolver problemas
+              </td>
+            </tr>
+          </table>
+
+          <br>
+
+        </div>
+
         <div style="display: none;font-size: 22px" id="competencias">
-          <h1 class="mt-4">Competencias</h1>
+          <h1 class="mt-4">
+            Contenidos de los conjuntos matemáticos
+          </h1>
+        
+          Actividades de complementación: <br>
+          <h4>-- Arrastrar los objetos para formar conjunto y colocarlo donde corresponde:</h4>
+          <br>
+
           <ul>
-            <li>Identificación de los conjuntos</li>
-            <li>Seriación de los conjuntos según las características</li>
-            <li>Realizar actividades de conjuntos</li>
-            <li>Manejar el vocabulario de señas para expresar las propias ideas de acuerdo a las actividades</li>
+            <li>Identificación de objetos según los atributos color, forma y uso</li>
+            <li>Uso de la web como fuente informática, videos, imágenes, recursos pedagógicos</li>
+            <li>Agrupación de las Figuras geométricas de acuerdo a las características</li>
+
 
           </ul>
 
@@ -108,7 +249,8 @@
           <h1 class="mt-4">Evaluacion</h1>
           <!-- <iframe src="./Figuras-Geometricas/index.html" style="height:1000px;width:100%;"></iframe> -->
 
-          <iframe src="https://rober19.github.io/drag-drop/dise%C3%B1o-instruccional-figuras-geometricas/Figuras-Geometricas/index.html"
+          <iframe
+            src="https://rober19.github.io/drag-drop/dise%C3%B1o-instruccional-figuras-geometricas/Figuras-Geometricas/index.html"
             style="height:1000px;width:100%;"></iframe>
 
           <!-- https://rober19.github.io/drag-drop/Figuras-Geometricas/index.html -->
@@ -127,40 +269,40 @@
 
     </div>
   </div>
-  
+
   <div>
-      <div class="row" align="center">
-        <div class="col">
-          <p>
-            Portal de Apropiados por <strong>Corporación Universitaria Rafael Núñez</strong> se distribuye bajo una
-            <strong>
-              Licencia Creative
-              Commons Atribución-NoComercial 4.0 Internacional.
-            </strong>
-            Permisos más allá del alcance de esta licencia pueden estar disponibles en <a
-              href="#">aidetc.red-alternativa.org</a>
-          </p>
-        </div>
-  
+    <div class="row" align="center">
+      <div class="col">
+        <p>
+          Portal de Apropiados por <strong>Corporación Universitaria Rafael Núñez</strong> se distribuye bajo una
+          <strong>
+            Licencia Creative
+            Commons Atribución-NoComercial 4.0 Internacional.
+          </strong>
+          Permisos más allá del alcance de esta licencia pueden estar disponibles en <a
+            href="#">aidetc.red-alternativa.org</a>
+        </p>
       </div>
-      <div class="row" align="center">
-          <div class="col">
-            <a href="http://aidetc.red-alternativa.org/" target="_blank"><img src="public/AIDETC.png" class="responsive-img"
-                width="150px"></a></a>
-            </div>
-            <div class="col">
-              <a href="https://www.colciencias.gov.co/" target="_blank"><img src="public/COLCIENCIAS.png" class="responsive-img"
-                  width="250px"></a></div>
-            <div class="col">
-              <a href="https://www.mineducacion.gov.co/1759/w3-channel.html?_noredirect=1" target="_blank"><img src="public/mineduc.png"
-                  class="responsive-img" width="250px" style="margin-top: 10px"></a>
-            </div>
-            <div class="col">
-              <a href="https://www.curn.edu.co/" target="_blank"><img src="public/curn_banner.png" class="responsive-img" width="250px"
-                  style="margin-top: 20px"></a>
-            </div>
-          </div>
+
     </div>
+    <div class="row" align="center">
+      <div class="col">
+        <a href="http://aidetc.red-alternativa.org/" target="_blank"><img src="public/AIDETC.png" class="responsive-img"
+            width="150px"></a></a>
+      </div>
+      <div class="col">
+        <a href="https://www.colciencias.gov.co/" target="_blank"><img src="public/COLCIENCIAS.png"
+            class="responsive-img" width="250px"></a></div>
+      <div class="col">
+        <a href="https://www.mineducacion.gov.co/1759/w3-channel.html?_noredirect=1" target="_blank"><img
+            src="public/mineduc.png" class="responsive-img" width="250px" style="margin-top: 10px"></a>
+      </div>
+      <div class="col">
+        <a href="https://www.curn.edu.co/" target="_blank"><img src="public/curn_banner.png" class="responsive-img"
+            width="250px" style="margin-top: 20px"></a>
+      </div>
+    </div>
+  </div>
   <!-- /#page-content-wrapper -->
 
 

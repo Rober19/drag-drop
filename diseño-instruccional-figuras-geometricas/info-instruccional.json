@@ -1,0 +1,65 @@
+{
+  "introduccion": "",
+  "data": [
+    {
+      "fname": "Adam",
+      "lname": "Schmitt",
+      "relation": "Brother",
+      "relationid": "1"
+    },
+    {
+      "fname": "Andrew",
+      "lname": "Name",
+      "relation": "Brother",
+      "relationid": "1"
+    },
+    {
+      "fname": "Jenna",
+      "lname": "Name",
+      "relation": "Wife",
+      "relationid": "2"
+    },
+    {
+      "fname": "Gary",
+      "lname": "Name",
+      "relation": "Father",
+      "relationid": "3"
+    },
+    {
+      "fname": "Judy",
+      "lname": "Name",
+      "relation": "Mother",
+      "relationid": "4"
+    },
+    {
+      "fname": "Justin",
+      "lname": "Name",
+      "relation": "Friend",
+      "relationid": "5"
+    },
+    {
+      "fname": "Billy",
+      "lname": "Name",
+      "relation": "Friend",
+      "relationid": "5"
+    },
+    {
+      "fname": "Robbie",
+      "lname": "Name",
+      "relation": "Friend",
+      "relationid": "5"
+    },
+    {
+      "fname": "Dylan",
+      "lname": "Name",
+      "relation": "Friend",
+      "relationid": "5"
+    },
+    {
+      "fname": "Zach",
+      "lname": "Name",
+      "relation": "Friend",
+      "relationid": "5"
+    }
+  ]
+}
