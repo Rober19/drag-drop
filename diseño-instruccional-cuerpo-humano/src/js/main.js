@@ -2,43 +2,41 @@ $('#menu-toggle').click(e => {
   e.preventDefault();
   $('#wrapper').toggleClass('toggled');
 });
-$('#b_introduccion').click(e => {
-  console.table(0);
-  side_bar({ introduccion: true });
-});
-$('#b_objetivo').click(e => {
-  console.table(1);
-  side_bar({ objetivo: true });
-});
-$('#b_competencias').click(e => {
-  console.table(1);
-  side_bar({ competencias: true });
-});
-$('#b_evaluacion').click(e => {
-  console.table(1);
-  side_bar({ evaluacion: true });
-});
-$('#b_fuentes').click(e => {
-  console.table(1);
-  side_bar({ fuentes: true });
+
+let ids = [
+  '#b_fuentes',
+  '#b_evaluacion',
+  '#b_contenidos',
+  '#b_competencias',
+  '#b_objetivo',
+  '#b_guia_docentes',
+  '#b_introduccion',
+];
+
+let arr1 = {};
+
+ids.forEach(item => {
+  $(item).click(e => {
+    ids.forEach(x => $(`#${b_key(x)}`).css('display', 'none'));
+    $(`#${b_key(e.target.id)}`).css('display', 'block');
+    console.log(b_key(e.target.id));
+  });
 });
 
-function side_bar(x) {
-  return {
-    introduccion: x.introduccion
-      ? $('#introduccion').css('display', 'block')
-      : $('#introduccion').css('display', 'none'),
-    objetivo: x.objetivo
-      ? $('#objetivo').css('display', 'block')
-      : $('#objetivo').css('display', 'none'),
-    competencias: x.competencias
-      ? $('#competencias').css('display', 'block')
-      : $('#competencias').css('display', 'none'),
-    evaluacion: x.evaluacion
-      ? $('#evaluacion').css('display', 'block')
-      : $('#evaluacion').css('display', 'none'),
-    fuentes: x.fuentes
-      ? $('#fuentes').css('display', 'block')
-      : $('#fuentes').css('display', 'none'),
-  };
+function b_key(item) {
+  let context = item.split('b_');
+  return context[1];
 }
+
+// var jqxhr = $.getJSON('info-instruccional.json', function(data ) {
+//   var items = [];
+//   // $.each( data, function( key, val ) {
+//   //   items.push( "<li id='" + key + "'>" + val + "</li>" );
+//   // });
+ 
+//   var mainContainer = document.getElementById("introduccion");
+//   var div = document.createElement("div");
+//   div.innerHTML = ``
+//   mainContainer.appendChild(div);
+// });
+

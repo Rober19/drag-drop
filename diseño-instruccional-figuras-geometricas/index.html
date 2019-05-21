@@ -17,23 +17,11 @@
   <link href="src/css/simple-sidebar.css" rel="stylesheet">
 
 
-  <script type="text/javascript">
-    function load() {
-      data = '[{"name" : "Riyaz"},{"name" : "Javed"},{"name" : "Arun"},{"name" : "Sunil"},{"name" : "Rahul"},{"name" : "Anita"}]';
-      var mydata = JSON.parse(data);
 
-
-      var div = document.getElementById('data');
-
-      for (var i = 0; i < mydata.length; i++) {
-        div.innerHTML = div.innerHTML + "<p class='inner' id=" + i + ">" + mydata[i].name + "</p>" + "<br>";
-      }
-    }
-  </script>
 
 </head>
 
-<body onload="load()">
+<body>
 
 
   <!-- <script>
@@ -66,11 +54,10 @@
       <div class="list-group list-group-flush">
         <a href="#" id="b_introduccion" class="list-group-item list-group-item-action bg-light">Introducción</a>
         <!-- Guia para docentes - Diseño instruccional -->
-        <a href="#" id="b_guia_docentes" class="list-group-item list-group-item-action bg-light">Factor y subfactores
-          (Guia para docentes- Diseño instruccional)</a>
+        <a href="#" id="b_guia_docentes" class="list-group-item list-group-item-action bg-light">  Guia para docentes- Diseño instruccional</a>
         <a href="#" id="b_objetivo" class="list-group-item list-group-item-action bg-light">Objetivo de
           Aprendizaje</a>
-          <a href="#" id="b_contenidos" class="list-group-item list-group-item-action bg-light">Contenidos</a>
+        <a href="#" id="b_contenidos" class="list-group-item list-group-item-action bg-light">Contenidos</a>
         <!-- Contenidos -->
         <a href="#" id="b_competencias" class="list-group-item list-group-item-action bg-light">Competencias</a>
         <a href="#" id="b_evaluacion" class="list-group-item list-group-item-action bg-light">Evaluación</a>
@@ -133,13 +120,14 @@
         </div>
 
         <div style="display: none;font-size: 22px" id="guia_docentes">
+          <h1>Factor y subfactores (Guia para docentes- Diseño instruccional)</h1>
           <p>
             Los niños a medida que arrastran los objetos para colocarlos donde corresponde deben identificar sus
             características por lo tantos tienes que estar atentos, a las semejanzas y diferencias durante la actividad
             para poder realizarla satisfactoriamente.
             <br>
             <br>
-            Sustentación pedagógica del objeto de aprendizaje:
+           <strong> Sustentación pedagógica del objeto de aprendizaje:</strong>
             <br>
             Estimular en el educando el conocimiento sobre los conjuntos y las distintas maneras de implementación que
             tiene en nuestro diario vivir, ya que las matemáticas se ven enfocada en todo lo que hacemos y los conjuntos
@@ -229,31 +217,27 @@
         </div>
 
         <div style="display: none;font-size: 22px" id="competencias">
-            <h1 class="mt-4">
-              Contenidos de los conjuntos matemáticos
-            </h1>
-          
-            Actividades de complementación: <br>
-            <h4>-- Arrastrar los objetos para formar conjunto y colocarlo donde corresponde:</h4>
-            <br>
-  
-            <ul>
-              <li>Identificación de objetos según los atributos color, forma y uso</li>
-              <li>Uso de la web como fuente informática, videos, imágenes, recursos pedagógicos</li>
-              <li>Agrupación de las Figuras geométricas de acuerdo a las características</li>
-  
-  
-            </ul>
-  
-          </div>
+          <h1 class="mt-4">
+            Competencias
+          </h1>
+
+          <ul>
+            <li>Identificar las figuras geométricas y relacionarlas con objeto de su entorno</li>
+            <li>Asociar las figuras geométricas con la palabra.</li>
+            <li>Interactúa con objetos que permitan estimular la resolución de problemas</li>
+
+
+          </ul>
+
+        </div>
 
         <div style="display: none;font-size: 22px" id="contenidos">
           <h1 class="mt-4">
             Contenidos de los conjuntos matemáticos
           </h1>
-        
+
           Actividades de complementación: <br>
-          <h4>-- Arrastrar los objetos para formar conjunto y colocarlo donde corresponde:</h4>
+          <h4>- Arrastrar los objetos para formar conjunto y colocarlo donde corresponde:</h4>
           <br>
 
           <ul>
