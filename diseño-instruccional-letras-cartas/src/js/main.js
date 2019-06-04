@@ -11,6 +11,7 @@ let ids = [
   '#b_objetivo',
   '#b_guia_docentes',
   '#b_introduccion',
+  '#b_autores',
 ];
 
 let arr1 = {};
